@@ -1,0 +1,62 @@
+# Criar umas cidades
+POST http://localhost:3030/cidades HTTP/1.1
+Content-Type: application/json
+ 
+{ "nome": "São Paulo", "uf": "SP" }
+ 
+###
+  
+POST http://localhost:3030/cidades HTTP/1.1
+Content-Type: application/json
+ 
+{ "nome": "Rio de Janeiro", "uf": "RJ" }
+ 
+###
+  
+POST http://localhost:3030/cidades HTTP/1.1
+Content-Type: application/json
+ 
+{ "nome": "Florianópolis", "uf": "SC" }
+  
+###
+  
+POST http://localhost:3030/cidades HTTP/1.1
+Content-Type: application/json
+ 
+{ "nome": "Porto Alegre", "uf": "RS" }
+ 
+ 
+###
+ 
+# Listar todas as cidades
+ 
+GET http://localhost:3030/cidades HTTP/1.1
+Content-Type: application/json
+ 
+ 
+ 
+###
+ 
+# Alterar uma cidade pelo _id
+ 
+# Preencha a variável abaixo com um _id qualquer listado na request acima
+@_id=<ALTERE AQUI>
+ 
+PATCH http://localhost:3030/cidades/{{_id}} HTTP/1.1
+Content-Type: application/json
+ 
+{ "nome": "CIDADE ALTERADA" }
+ 
+###
+ 
+# Listar todas as cidades para ver a alteração
+ 
+GET http://localhost:3030/cidades HTTP/1.1
+Content-Type: application/json
+ 
+ 
+###
+ 
+# Deletar uma cidade pelo _id
+DELETE http://localhost:3030/cidades/{{_id}} HTTP/1.1
+Content-Type: application/json
